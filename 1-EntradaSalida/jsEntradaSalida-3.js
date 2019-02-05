@@ -2,6 +2,9 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
+	var nombre;
+	var nombre = elNombre.value;
+	alert(nombre);
 	
 }
 
