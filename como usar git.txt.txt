@@ -1,0 +1,11 @@
+Primero: git clone repo  //clona repositorio_Una sola vez se ejecuta
+cd CursoIngresoJS
+cd+ C Tab <-/->
+Segundo: git add . //suma_ varias veces se ejecuta
+Tercer: git commint -M "comentario del commit"
+Cuarto: git push 
+
+1- git clone repo
+2- git add .
+3- git commit -m " comentario del commit"
+4- git push
