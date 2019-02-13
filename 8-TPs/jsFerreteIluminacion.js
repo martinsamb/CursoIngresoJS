@@ -10,5 +10,81 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var cantidadLamparas;
+ 	var precioLampara;
+ 	var marcaLampara;
+ 	var precioImpuesto;
+ 	var precioFinal;
+
+ 	cantidadLamparas = Cantidad.value;
+ 	marcaLampara = Marca.value;
+
+ 	cantidadLamparas = parseInt(cantidadLamparas);
+
+ 	if (cantidadLamparas > 5)
+ 	{
+ 		precioLampara = 35*0.5*cantidadLamparas;
+		document.getElementById('precioDescuento').value = precioLampara;
+
+ 	}else
+ 	{
+ 		if(cantidadLamparas == 5)
+ 		{
+ 			if(marcaLampara == "ArgentinaLuz")
+ 			{
+ 				precioLampara = 35*0.6*cantidadLamparas;
+				document.getElementById('precioDescuento').value = precioLampara;
+ 			}else
+ 			{
+ 				precioLampara = 35*0.7*cantidadLamparas;
+				document.getElementById('precioDescuento').value = precioLampara;
+ 			}
+ 		}
+ 	}
+ 	if(cantidadLamparas == 4)
+ 	{
+ 		if(marcaLampara == "ArgentinaLuz" || marcaLampara == “FelipeLamparas” )
+ 		{
+ 			precioLampara = 35*0.75*cantidadLamparas;
+			document.getElementById('precioDescuento').value = precioLampara;
+ 		}
+ 		else
+ 		{
+ 			precioLampara = 35*0.8*cantidadLamparas;
+			document.getElementById('precioDescuento').value = precioLampara;
+ 		}
+ 	}
+ 	if(cantidadLamparas == 3)
+ 	{
+ 		if(marcaLampara == "ArgentinaLuz")
+ 		{
+ 			precioLampara = 35*0.85*cantidadLamparas;
+			document.getElementById('precioDescuento').value = precioLampara;
+ 		}
+ 		else
+ 		{
+	 		if(marcaLampara == “FelipeLamparas”)
+	 		{
+	 			precioLampara = 35*0.9*cantidadLamparas;
+				document.getElementById('precioDescuento').value = precioLampara;	
+	 		}
+	 		else
+ 			{
+ 				precioLampara = 35*0.95*cantidadLamparas;
+				document.getElementById('precioDescuento').value = precioLampara;	
+ 			}
+
+ 		}
+ 		else
+ 		{
+			if(precioLampara > 120)
+	 		{
+	 			precioImpuesto = precioLampara*0.1*cantidadLamparas;
+	 			precioFinal = precioLampara + precioImpuesto;
+	 			alert( "IIBB Usted pago "+ precioFinal + " , siendo " + precioImpuesto + " el impuesto que se pagó.");
+	 		}
+	 	}	
+
+ 				
+
 }

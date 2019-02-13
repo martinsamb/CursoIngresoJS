@@ -8,6 +8,7 @@ function mostrar()
 
 	nombre = prompt("Por favor ingrese un dato");
 	//elNombre.value = nombre;
+	//obtener nombre por id
 	document.getElementById('elNombre').value = nombre;
 
 

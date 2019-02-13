@@ -14,12 +14,8 @@ function mostrarAumento()
 	ingreseSueldo = parseInt(ingreseSueldo);
 	//ingreseResultado = parseInt(ingreseResultado
 
-	ingreseResultado = ingreseSueldo*1,1;
-	resultado = ingreseSueldo.value
+	ingreseResultado = ingreseSueldo*1.1;
 
-
-
-	 
-
+	document.getElementById('resultado').value = ingreseResultado;
 	
 }
