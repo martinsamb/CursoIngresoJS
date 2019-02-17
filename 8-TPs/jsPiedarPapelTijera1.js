@@ -9,12 +9,12 @@ var eleccionMaquina;
 function comenzar()
 {
 	
-
+	eleccionMaquina = Math.floor((Math.random() * 3) + 1);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	if()	
 
 }//FIN DE LA FUNCIÓN
 function papel()

@@ -8,9 +8,10 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+
+ function CalcularPrecio () 
 {
- 	var cantidadLamparas;
+ 	var lamparas;
  	var precioLampara;
  	var marcaLampara;
  	var precioImpuesto;
@@ -24,10 +25,37 @@ function CalcularPrecio ()
  	variedad = document.getElementById("Marca").value;
 
  	//ParseInt necesarios
- 	cantidadLamparas = parseInt(cantidadLamparas);
+ 	cantidadLamparas = parseInt(lamparas);
  	precio = parseInt (precio);
 
  	precio = lamparas*35;
+
+ 	switch(lamparas)
+ 	{
+ 		case 5:
+ 				if(marcaLampara == "ArgentinaLuz")
+	 		{
+	 		
+				desc = 0.6
+	 		}else
+	 		{
+				desc = 0.7;
+	 		}
+
+ 		break;
+ 		case 4:
+ 		switch(variedad)
+ 			{
+ 				case "ArgentinaLuz":
+ 				case "FelipeLamparas":
+ 					desc = 0.75;
+ 					break;
+ 				default:
+ 					desc = 0.8;
+ 					break;
+ 			}
+
+ 	}
 
 
  	if (cantidadLamparas >= 6)
@@ -53,10 +81,10 @@ function CalcularPrecio ()
 		 	{
 		 		if(marcaLampara == "ArgentinaLuz" || marcaLampara =="FelipeLamparas")
 		 		{
-		 			desc = 0.75;
+
 		 		}else
 		 		{
-		 			desc = 0.8:
+
 		 		}
 		 	}else
 		 	{

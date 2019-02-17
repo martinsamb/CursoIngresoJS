@@ -5,16 +5,16 @@ function mostrar()
 	var numeroUno;
 	var numeroDos;
 
-	numeroUno = Math.random()*10;
+	numeroUno = Math.floor((Math.random() * 10) + 1);
 
-	numeroDos = Math.floor(numeroUno);
+	numeroDos = Math.floor((Math.random() * 10) + 1);
 
-	//alert(numeroDos);
 
 	if( numeroDos == 9 || numeroDos == 10)
 	{
 		alert("Excelente");
 	}else
+	{
 		if(numeroDos > 4)
 		{
 			alert ("Aprobo");
@@ -22,6 +22,7 @@ function mostrar()
 			{
 				alert("Vamos, la proxima se puede");	
 			}
+	}
 		
 	
 
