@@ -1,34 +1,54 @@
 function mostrar()
 {
-	var numeroUno;
-	var numeroDos;
-	var numeroResultado;
+//declaro variable
+var numeroIng
+var numeroMayor;
+var valor;
+var desc;
+var mensaje;
+var suma;
+ 
+//ingreso numero
+numeroIng = prompt("Ingrese un numero");
+//parseInt numero ingresado
+numeroIng = parseInt(numeroIng);
 
-	numeroUno = prompt("Ingrese numero");
-	numeroDos = prompt("Ingrese otro numero");
-
-	numeroUno = parseInt(numeroUno);
-	numeroDos = parseInt(numeroDos);
-
-	if( numeroUno > numeroDos)
-	{
-		numeroResultado = numeroUno-numeroDos;
-		alert( "El resultado es:" + numeroResultado);
-	}else 
-	{
-		if(numeroUno == numeroDos)
+switch(numeroIng)
+{
+	case "20":
+	case "50":
+	case "10":
+	case 30:
+		suma = 20+50+10+30;
 		{
-			alert("El resultado es: " + numeroUno + numeroDos);
-		}else
-		{
-			numeroResultado = numeroUno+numeroDos;
-			alert("El resultado es: " + numeroResultado);	
+			if(suma > 100)
+			{
+				desc = 0.1;
+			}
 		}
-	}
-	if(numeroResultado > 10)
-	{
-		alert("la suma es"+ numeroResultado+" y supero el 10")
-	}
+		break;
+	case 15:
+	case 20:
+	case 14:
+	case 7:
+		suma = 15+20+14+7;
+		{
+			if(suma > 50)
+			{
+				desc = 0.05;
+			}
+		}
+		break;
+	case 10:
+		suma = 10+10+10+10;
+			desc = 1.15;
+	default:
+
+}
+
+alert(mensaje);
+
+
 
 
 }	

@@ -10,87 +10,86 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidadLamparas;
- 	var precioLampara;
- 	var marcaLampara;
+ 	var lamparas;
+ 	var precio;
+ 	var variedad;
  	var precioImpuesto;
  	var precioFinal;
+ 	var desc;
 
  	//Tomo datos
- 	cantidadLamparas = Cantidad.value;
- 	marcaLampara = Marca.value;
+ 	lamparas = Cantidad.value;
+ 	variedad = Marca.value;
 
- 	lamparas = document.getElementById("Cantidad").value;
- 	variedad = document.getElementById("Marca").value;
+ 	lamparas = document.getElementById('Cantidad').value;
+ 	variedad = document.getElementById('Marca').value;
 
  	//ParseInt necesarios
- 	cantidadLamparas = parseInt(cantidadLamparas);
- 	precio = parseInt (precio);
+ 	lamparas = parseInt(lamparas);
 
  	precio = lamparas*35;
 
-
- 	if (cantidadLamparas >= 6)
+ 	if (lamparas >= 6)
  	{
  		desc = 0.5;
-
+ 		
  	}else
  	{
- 		if(cantidadLamparas == 5)
+ 		if(lamparas == 5)
 	 	{
-	 		if(marcaLampara == "ArgentinaLuz")
+	 		if(variedad == "ArgentinaLuz")
 	 		{
-	 		
-				desc = 0.6
+				desc = 0.6;		
 	 		}else
 	 		{
-				desc = 0.7;
+				desc = 0.7;		
 	 		}
 	 	}
-	 	else
+	 	if(lamparas == 4)
 	 	{
-		 	if(cantidadLamparas == 4)
-		 	{
-		 		if(marcaLampara == "ArgentinaLuz" || marcaLampara =="FelipeLamparas")
-		 		{
-		 			desc = 0.75;
-		 		}else
-		 		{
-		 			desc = 0.8:
-		 		}
-		 	}else
-		 	{
+	 		if(variedad == "ArgentinaLuz" || marcaLampara =="FelipeLamparas")
+	 		{
+	 			desc = 0.75;
+	 		}else
+	 		{
+				desc = 0.8;	
+	 		}
+	 	}else
+	 	{
 
-		 	}
-		 }
-	 	if(cantidadLamparas == 3)
+	 	}
+	 		
+	 	if(lamparas == 3)
 	 	{
-	 		if(marcaLampara == "ArgentinaLuz" )
+	 		if(variedad == "ArgentinaLuz" )
 	 		{
 	 			desc = 0.85;
 	 		}
 	 		else
 	 		{
-	 			if(marcaLampara == "FelipeLamparas")
+	 			if(variedad == "FelipeLamparas")
 	 			{
 					desc = 0.9;	
 	 			}
 	 			else
 	 			{
-	 				desc = 0.95:
+	 				desc = 0.95;
 	 			}
 	 		}
 	 	}
-
  	}
  	
+ 	precio = precio*desc;
+ 	document.getElementById('precioDescuento').value = precio;
 
-	if(precioLampara > 120)
-	 	{
-	 		precioImpuesto = precioLampara*0.1;
-	 		precioFinal = precioLampara + precioImpuesto;
-	 		alert( "IIBB Usted pago "+ precioFinal + " , siendo " + precioImpuesto + " el impuesto que se pagó.");
-	 	}
+	if(precio > 120)
+	{
+	 	precioImpuesto = precio*0.1;
+	 	precioFinal = precio + precioImpuesto;
+	 	alert( "IIBB Usted pago "+ precioFinal + " , siendo " + precioImpuesto + " el impuesto que se pagó.");
+	}
+
+
 	 		
 
  				
