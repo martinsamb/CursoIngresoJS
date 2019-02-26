@@ -1,37 +1,30 @@
 function mostrar()
 {
-	var sexo;
-	var promedio;
-	var nota;
 	var numero;
-	var acumulador;
-	var contador = 0;
+	var sexo;
+	var contador=0;
+	var promedio;
+	var acumulador=0;
 	var notaMasBaja;
 	var sexoNotaBaja;
-	var contadorVarones=0;
+	var contadorVarones;
 
-	isNaN();
-
-	while(contador<5)
+	while( contador < 5)
 	{
 		contador++;
-
-		numero=prompt("ingrese nota entre 0 y 10");
-		numero=parseInt(numero);
-		while(isNaN(numero) || numero < 0 || numero > 10)
+		numero = prompt("Ingrese nota entre 0 y 10");
+		numero = parseInt(numero);
+		while(numero < 0 || numero > 10)
 		{
-			numero = prompt("error,reingrese un número entre 0 y 10.");
-			numero=parseInt(numero);
+			numero = prompt("Ingrese f ó m");
+			numero = parseInt(numero);
 		}
-
-		sexo = prompt("ingrese f ò m");
-		while(!isNaN(numero) || sexo!='f' && sexo!== 'm')
-			{
-				sexo = prompt("error,reingrese un sexo valido f ó m .");
-			}
-		
-	
-		if(contador  == 1)
+		sexo = prompt("Ingrese f o m");
+		while(sexo != "f" && sexo != "m")
+		{
+			sexo = prompt("error, reingrese un sexo válido, f ó m");
+		}
+		if(contador == 1)
 		{
 			notaMasBaja = numero;
 			sexoNotaBaja = sexo;
@@ -44,18 +37,17 @@ function mostrar()
 				sexoNotaBaja = sexo;
 			}
 		}
-		if( sexo == "m" && numero >= 6)
+		if(sexo == "m" && numero >= 6)
 		{
-			contadorVarones = contadorVarones+1;
+			contadorVarones = contadorVarones + 1 ;
 		}
 
-	acumulador = acumulador+numero;
-	
+		acumulador = acumulador + numero ;
 	}
 
-	promedio = acumulador/5;
-	alert("El promedio de las notas totales es"+ promedio);
-	alert("la nota mas baja es" + notaMasBaja+ " y el sexo de esta persona es"+ sexoNotaBaja);
-	alert("la cantida de varones aprobados es"+ contadorVarones);
+	promedio = acumulador / 5 ;
 
+	alert("El promedio de las notas totales es: " + promedio);
+	alert("La nota mas baja es: "+ notaMasBaja + "y el sexo de esa persona es: "+ sexoNotaBaja);
+	alert("La cantidad de varones aprobado es: " + contadorVarones);
 }
