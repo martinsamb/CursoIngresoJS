@@ -38,7 +38,6 @@ function mostrar()
 	{
 		//Ingreso nombre
 		nombre = prompt("Ingrese nombre");
-		nombre = parseInt(nombre);
 
 		//ingreso peso
 		peso = prompt("Ingrese peso");
@@ -62,7 +61,7 @@ function mostrar()
 			temperatura = parseInt(temperatura);	
 		}
 		//cantidad de temperaturas pares e impares
-		if(temperatura % 2 == 0 || temperatura !=0)
+		if(temperatura % 2 == 0 || temperatura != 0)
 		{
 			cantidadTemperaturasPares++;
 		}
@@ -80,7 +79,7 @@ function mostrar()
 			nombreMasPesado = nombre;
 			menosPesado = peso;
 			nombreMenosPesado = nombre;
-			temperutaMaxima = temperatura;
+			temperaturaMaxima = temperatura;
 			temperaturaMinima = temperatura;
 		}
 		else
@@ -98,7 +97,7 @@ function mostrar()
 		}
 		if(temperatura > temperaturaMaxima)
 		{
-			temperutaMaxima = temperatura;
+			temperaturaMaxima = temperatura;
 		}
 		if(temperatura < temperaturaMinima)
 		{
@@ -111,7 +110,7 @@ function mostrar()
 		}
 		//suma de peso
 
-		suma= suma + peso;
+		suma = suma + peso;
 
 		respuesta = prompt("Desea continuar, Enter para seguidor y NO para cortar");
 	}
